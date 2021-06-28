@@ -10,5 +10,7 @@ public interface IStackCell {
 
     Object getElement();
 
+    void setElement(Object o);
+
     String toString();
 }

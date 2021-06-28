@@ -14,5 +14,7 @@ public interface IStack {
 
     boolean isEmpty();
 
+    int size();
+
     void print();
 }

@@ -28,6 +28,11 @@ public class StackCell implements IStackCell {
     }
 
     @Override
+    public void setElement(Object o) {
+        this.storaged_element = o;
+    }
+
+    @Override
     public String toString() {
         return this.storaged_element.toString();
     };
