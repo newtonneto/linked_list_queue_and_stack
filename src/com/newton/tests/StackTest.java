@@ -39,7 +39,7 @@ public class StackTest implements IStackTest {
         //Exibe toda a pilha
         this.stack.print();
 
-        //Remove o único elemento da lista
+        //Remove o único elemento da pilha
         System.out.println("Elemento removido: " + this.stack.removeNext().getElement().toString());
 
         //Exibe toda a pilha

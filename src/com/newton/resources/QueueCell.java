@@ -29,6 +29,10 @@ public class QueueCell implements IQueueCell {
 
     @Override
     public void setElement(Object o) {
-
+        this.storaged_element = o;
     }
+
+    public String toString() {
+        return this.storaged_element.toString();
+    };
 }

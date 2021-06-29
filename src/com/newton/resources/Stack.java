@@ -18,7 +18,7 @@ public class Stack implements IStack {
     public void add(Object o) {
         StackCell cell = new StackCell(o);
 
-        if (isEmpty()) {
+        if (this.isEmpty()) {
             this.first_cell = cell;
         } else {
             this.last_cell.setNext(cell);
