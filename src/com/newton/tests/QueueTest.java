@@ -2,7 +2,7 @@ package com.newton.tests;
 
 import com.newton.interfaces.IQueueTest;
 import com.newton.resources.Queue;
-import com.newton.resources.QueueCell;
+import com.newton.resources.Cell;
 
 public class QueueTest implements IQueueTest {
     Queue queue;
@@ -14,15 +14,15 @@ public class QueueTest implements IQueueTest {
     @Override
     public void executeTestOne() {
         //Adiciona 5 elementos
-        queue.add(new QueueCell("1"));
-        queue.add(new QueueCell("2"));
-        queue.add(new QueueCell("3"));
-        queue.add(new QueueCell("4"));
-        queue.add(new QueueCell("5"));
+        queue.add(new Cell("1"));
+        queue.add(new Cell("2"));
+        queue.add(new Cell("3"));
+        queue.add(new Cell("4"));
+        queue.add(new Cell("5"));
 
         //Exibe toda a pilha e o seu tamanho
         queue.print();
-        System.out.println("Tamanho da pilha: " + this.queue.size());
+        System.out.println("Tamanho da pilha: " + this.queue.getSize());
 
         //Remove um elemento
         System.out.println("Elemento removido: " + this.queue.removeNext().getElement().toString());
@@ -54,12 +54,12 @@ public class QueueTest implements IQueueTest {
 
     @Override
     public void executeTestTwo() {
-        this.queue.first();
+        this.queue.getFirst();
     }
 
     @Override
     public void executeTestThree() {
-        this.queue.last();
+        this.queue.getLast();
     }
 
     @Override

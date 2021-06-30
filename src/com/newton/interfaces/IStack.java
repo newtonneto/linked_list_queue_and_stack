@@ -1,20 +1,8 @@
 package com.newton.interfaces;
 
-import com.newton.exceptions.EmptyStackException;
-import com.newton.resources.StackCell;
+import com.newton.exceptions.EmptyException;
+import com.newton.resources.Cell;
 
-public interface IStack {
-    void add(Object o);
-
-    StackCell removeNext() throws EmptyStackException;
-
-    StackCell first() throws EmptyStackException;
-
-    StackCell last() throws EmptyStackException;
-
-    boolean isEmpty();
-
-    int size();
-
-    void print();
+public interface IStack extends IGeneric {
+    Cell removeNext() throws EmptyException;
 }

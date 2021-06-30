@@ -1,21 +1,8 @@
 package com.newton.interfaces;
 
-import com.newton.exceptions.EmptyQueueException;
-import com.newton.resources.QueueCell;
+import com.newton.exceptions.EmptyException;
+import com.newton.resources.Cell;
 
-
-public interface IQueue {
-    void add(Object o);
-
-    QueueCell removeNext() throws EmptyQueueException;
-
-    QueueCell first() throws EmptyQueueException;
-
-    QueueCell last() throws EmptyQueueException;
-
-    boolean isEmpty();
-
-    int size();
-
-    void print();
+public interface IQueue extends IGeneric {
+    Cell removeNext() throws EmptyException;
 }

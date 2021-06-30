@@ -1,24 +1,24 @@
 package com.newton.resources;
 
-import com.newton.exceptions.EmptyStackException;
-import com.newton.interfaces.IStackCell;
+import com.newton.exceptions.EmptyException;
+import com.newton.interfaces.ICell;
 
-public class StackCell implements IStackCell {
-    private StackCell next;
+public class Cell implements ICell {
+    private Cell next;
     private Object storaged_element;
 
-    public StackCell(Object element) {
+    public Cell(Object element) {
         this.next = null;
         this.storaged_element = element;
     }
 
     @Override
-    public void setNext(StackCell o) {
+    public void setNext(Cell o) {
         this.next = o;
     }
 
     @Override
-    public StackCell getNext() throws EmptyStackException {
+    public Cell getNext() throws EmptyException {
         return this.next;
     }
 
@@ -32,7 +32,6 @@ public class StackCell implements IStackCell {
         this.storaged_element = o;
     }
 
-    @Override
     public String toString() {
         return this.storaged_element.toString();
     };

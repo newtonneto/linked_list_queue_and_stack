@@ -2,7 +2,7 @@ package com.newton.tests;
 
 import com.newton.interfaces.IStackTest;
 import com.newton.resources.Stack;
-import com.newton.resources.StackCell;
+import com.newton.resources.Cell;
 
 public class StackTest implements IStackTest {
     Stack stack;
@@ -15,15 +15,15 @@ public class StackTest implements IStackTest {
     @Override
     public void executeTestOne() {
         //Adiciona 5 elementos
-        this.stack.add(new StackCell("1"));
-        this.stack.add(new StackCell("2"));
-        this.stack.add(new StackCell("3"));
-        this.stack.add(new StackCell("4"));
-        this.stack.add(new StackCell("5"));
+        this.stack.add(new Cell("1"));
+        this.stack.add(new Cell("2"));
+        this.stack.add(new Cell("3"));
+        this.stack.add(new Cell("4"));
+        this.stack.add(new Cell("5"));
 
         //Exibe toda a pilha e o seu tamanho
         this.stack.print();
-        System.out.println("Tamanho da pilha: " + this.stack.size());
+        System.out.println("Tamanho da pilha: " + this.stack.getSize());
 
         //Remove um elemento
         System.out.println("Elemento removido: " + this.stack.removeNext().getElement().toString());
@@ -48,12 +48,12 @@ public class StackTest implements IStackTest {
 
     @Override
     public void executeTestTwo() {
-        this.stack.first();
+        this.stack.getFirst();
     }
 
     @Override
     public void executeTestThree() {
-        this.stack.last();
+        this.stack.getLast();
     }
 
     @Override
